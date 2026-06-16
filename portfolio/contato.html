@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaiza Dantas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-animado">
+        <div class="bolha bolha-1"></div>
+        <div class="bolha bolha-2"></div>
+        <div class="bolha bolha-3"></div>
+    </div>
+    <div id="container">
+        <nav>
+            <div class="dev">
+                thaiza<span>.</span>dev
+            </div>
+            <div class="menu">
+                <a href="sobre.html">Sobre mim</a>
+                <a href="formacao.html">Formação</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </nav>
+        <div class="conteudo">
+            <p class="ola">>Fale comigo</p>
+
+            <h1>Vamos <span>conversar?</span></h1>
+            <p>Aberta a oportunidades de estágio e projetos de desenvolvimento de software</p>
+
+            <div class="address">
+                    <div class="card-address">
+                        <span>🐙</span>
+                        <p>GitHub</p>
+                        <a href="https://github.com/thaiza-d">github.com/thaiza-d</a>
+                    </div>
+                    <div class="card-address">
+                        <span>💼</span>
+                        <p>LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/thaiza-dantas-b312101b2/">linkedin.com/in/thaiza</a>
+                    </div>
+            </div>
+            <hr>
+            <div class="ola">> </div>
+            <p class="p-ola">ou me envie uma mensagem por aqui:</p>
+
+            <div class="formulario">
+                <p>Nome</p>
+                <input id="nome" class="nome" type="text" placeholder="Seu nome"><span class="erro" id="erro-nome"></span>
+                <p>E-mail</p>
+                <input id="email" class="email" type="email" placeholder="seu@email.com"><span class="erro" id="erro-email"></span>
+                <p>Mensagem</p>
+                <textarea id="mensagem" class="mensagem" type="text" placeholder="Sua mensagem..."></textarea><span class="erro" id="erro-mensagem"></span>
+
+                <button id="btn-enviar"  onclick="enviar()">Enviar mensagem</button>
+            </div>
+
+            <div id="modal" class="modal-overlay">
+                <div class="modal-box">
+                    <p>✅ Mensagem enviada com sucesso!</p>
+                    <button id="fechar-modal" onclick="fechar()"> Fechar</button>
+                </div>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html>
