@@ -1,32 +1,40 @@
+# ENV FILES
 .env
+.env*
 .env.local
 .env.production
 
+# BYTECODE
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
+# VIRTUAL ENV
 venv/
 env/
 .venv/
-.env/
 
+# TEST / COVERAGE
 .pytest_cache/
 htmlcov/
 .coverage
 
+# IDE
 .vscode/
 .idea/
 *.suo
 *.user
 
+# SYSTEM FILES
 .DS_Store
 Thumbs.db
 desktop.ini
 
+# LOGS
 *.log
 
+# BUILD
 dist/
 build/
 *.egg-info/
