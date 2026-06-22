@@ -1,40 +1,32 @@
-# Variáveis de ambiente — NUNCA suba isso
 .env
 .env.local
 .env.production
 
-# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
-# Ambientes virtuais
 venv/
 env/
 .venv/
 .env/
 
-# Pytest
 .pytest_cache/
 htmlcov/
 .coverage
 
-# IDEs
 .vscode/
 .idea/
 *.suo
 *.user
 
-# Sistema operacional
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Logs
 *.log
 
-# Distribuição Python
 dist/
 build/
 *.egg-info/
