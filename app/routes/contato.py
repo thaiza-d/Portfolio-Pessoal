@@ -7,29 +7,21 @@ import smtplib
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import os
+import resend
 
 load_dotenv()
 
 router = APIRouter(prefix="/contato", tags=["contato"])
 
+resend.api_key = os.getenv("RESEND_API_KEY")
+
 def enviar_email(nome, email, mensagem):
-    msg = MIMEText(f"""
-    Nome: {nome}
-    Email: {email}
-    Mensagem:
-    {mensagem}
-    """)
-
-    msg["Subject"] = f"Portfólio - mensagem de {nome}"
-    msg["From"] = os.getenv("MEU_EMAIL")
-    msg["To"] = os.getenv("MEU_EMAIL")
-
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=10) as servidor:
-        servidor.login(
-            os.getenv("MEU_EMAIL"),
-            os.getenv("SENHA_EMAIL")
-        )
-        servidor.send_message(msg)
+    resend.Emails.send({
+        "from": os.getenv("RESEND_EMAIL"),
+        "to": os.getenv("MEU_EMAIL"),
+        "subject": f"Portfólio - mensagem de {nome}",
+        "text": f"Nome: {nome}\nEmail: {email}\nMensagem: {mensagem}"
+    })    
 
 @router.post("/")
 def enviar_mensagem(
