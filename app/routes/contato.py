@@ -28,11 +28,6 @@ def enviar_mensagem(envio: ContatoCreate, db: Session= Depends(get_db)):
     db.commit()
     db.refresh(nova_mensagem)
 
-    try:
-        nova_mensagem()
-    except Exception as erro:
-        print(erro)
-
     msg = MIMEText(
     f"""
     Nome: {envio.nome}

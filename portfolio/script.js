@@ -5,6 +5,24 @@ window.enviar = async function () {
     const mensagem = document.getElementById("mensagem")
     const btnEnviar = document.getElementById("btn-enviar")
 
+    limparErros()
+    let valido = true
+
+    if (nome.value.trim() === "") {
+        mostrarErro(nome, "erro-nome", "Por favor, informe seu nome.")
+        valido = false
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email.value.trim())) {
+        mostrarErro(email, "erro-email", "Informe um e-mail válido.")
+        valido = false
+    }
+    if (mensagem.value.trim() === "") {
+        mostrarErro(mensagem, "erro-mensagem", "Por favor, escreva sua mensagem.")
+        valido = false
+    }
+    if (!valido) return
+
     try {
 
         btnEnviar.disabled = true
