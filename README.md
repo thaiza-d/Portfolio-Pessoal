@@ -2,6 +2,8 @@
 
 Portfólio pessoal desenvolvido com HTML, CSS e JavaScript no frontend e FastAPI + Python no backend. O projeto inclui um formulário de contato funcional que salva mensagens no banco de dados e encaminha para o e-mail da desenvolvedora via Resend.
 
+Link do portfólio: https://thaiza-dantas.netlify.app/
+
 ---
 
 ## Sobre o projeto

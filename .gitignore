@@ -5,7 +5,7 @@
 .env.production
 
 # BYTECODE
-__pycache__/
+__pycache__
 *.py[cod]
 *.pyo
 *.pyd
